@@ -116,17 +116,19 @@ def InpGenerater(IterNumFloat):
 
 	#====================================================================================================
 	#-------------------------------------Solid and void elements----------------------------------------
-	if IterNum == 0:
-		DV = [1.0] * len(EleNodes[0])        #Elastic modulus for each solid element
-	else:
-		#Read file generated from Matlab
-		DVFileName = './DesignVariables/DV_Iter' + str(IterNum) + '.dat'
-		with open(DVFileName, mode = 'r', encoding = 'utf8') as DesignVars:       #Open file
-		    DVStr = DesignVars.readlines()
+	# This is replaced by some change in main program
+	# if IterNum == 0:
+	# 	DV = [1.0] * len(EleNodes[0])        #Elastic modulus for each solid element
+	# else:
 
-		DV = []
-		for dv in DVStr:
-			DV.append(float(dv.strip()))
+	#Read file generated from Matlab
+	DVFileName = './DesignVariables/DV_Iter' + str(IterNum) + '.dat'
+	with open(DVFileName, mode = 'r', encoding = 'utf8') as DesignVars:       #Open file
+	    DVStr = DesignVars.readlines()
+
+	DV = []
+	for dv in DVStr:
+		DV.append(float(dv.strip()))
 
 	# SolidElement and Existed Nodes
 	NodeExisted = NodeID.copy()

@@ -166,7 +166,7 @@ while ObjChange10 > ConvergeCondition
     end
 end
 
-%get topology
+%Get topology
 dos('abaqus cae noGUI=PostProcessor.py','-echo')
 
 %History curve plot
