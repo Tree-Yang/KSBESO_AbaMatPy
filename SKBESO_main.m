@@ -1,3 +1,9 @@
+%Main Script for soft-kill bidirection evolution method
+%*******************************************************
+%By J S Yang
+%Date: 2018-12-04
+%*******************************************************
+
 clear; close all; clc;
 
 %Parameters
@@ -160,4 +166,8 @@ while ObjChange10 > ConvergeCondition
     end
 end
 
+%get topology
 dos('abaqus cae noGUI=PostProcessor.py','-echo')
+
+%History curve plot
+[DVHis,ObjValHis] = HistoryPlot;

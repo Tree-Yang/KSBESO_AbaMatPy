@@ -1,6 +1,9 @@
 # -*- coding: UTF-8 -*-
-# By J S Yang
 # To creat set in *.odb files for reslut display
+#************************************************************
+# By J S Yang
+# Date: 2018-12-04
+#************************************************************
 
 #Labrary import
 from abaqus import *

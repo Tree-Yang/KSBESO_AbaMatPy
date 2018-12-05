@@ -1,4 +1,9 @@
 #Define a function to get result from *.odb files
+#******************************************************
+# By J S Yang
+# Date: 2018-12-02
+#******************************************************
+
 from odbAccess import *
 from abaqusConstants import *
 import io
